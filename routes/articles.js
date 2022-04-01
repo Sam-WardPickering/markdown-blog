@@ -7,6 +7,8 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    const 
+    const article = new Article({
+        
+    })
 })
 module.exports = router
