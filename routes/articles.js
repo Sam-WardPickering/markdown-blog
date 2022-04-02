@@ -7,7 +7,8 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    res.send(req.params.id)
+    const article = Article.findById(req.params.id)
+    res.send('articles/show', { article: article })
 })
 
 router.post('/', async (req, res) => {
